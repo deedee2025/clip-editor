@@ -1,0 +1,124 @@
+.clip-list {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.clip-list__header {
+  background: $gray-darker-color-2;
+  padding: 5px 15px;
+  display: table;
+  width: 100%;
+
+  @include ghost();
+
+  > .button-set {
+    float: right;
+  }
+
+  .button-set {
+    min-height: 33px;
+  }
+}
+
+.clip-list__title {
+  font-size: 16px;
+  margin: 0;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.clip-list__body {
+  flex-grow: 1;
+  overflow-y: auto;
+
+  > ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.clip-list__video {
+  font-size: 16px;
+  font-weight: bold;
+
+  .clip-list__video-name {
+    display: block;
+    border-bottom: 1px solid $gray-lighter-color;
+    padding: 5px 15px;
+
+    > i {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    > span {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .button-set {
+      float: right;
+    }
+
+    @include ghost();
+  }
+
+  > ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.clip-list__clip {
+  font-size: 14px;
+  font-weight: normal;
+  border-bottom: 1px solid $gray-darker-color-2;
+  padding: 8px 15px 8px 45px;
+
+  @include ghost();
+
+  .clip-list__clip-name {
+    display: inline-block;
+
+    > i {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    > span {
+      cursor: pointer;
+      padding: 4px 12px;
+      border-radius: 2px;
+      width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding-left: 5px;
+
+      &:hover {
+        background: $gray-darker-color-2;
+      }
+    }
+
+    .form-control {
+      display: inline-block;
+      width: 200px;
+      vertical-align: middle;
+      padding-left: 5px;
+
+      + i {
+        color: $error-color;
+        margin-left: -20px;
+      }
+    }
+  }
+
+  .button-set {
+    float: right;
+    margin-top: 2px;
+  }
+}

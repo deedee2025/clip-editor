@@ -1,0 +1,7 @@
+@mixin ghost() {
+  &:after {
+    content: ' ';
+    display: table;
+    clear: both;
+  }
+}

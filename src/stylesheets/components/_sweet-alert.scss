@@ -1,0 +1,28 @@
+body {
+  .sweet-alert {
+    background: $gray-color;
+    border-radius: 2px;
+    box-shadow: $z-depth-1;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    h2,
+    p {
+      color: white;
+    }
+
+    button.cancel {
+      background: $gray-darker-color-2;
+
+      &:hover {
+        background: rgba($gray-darker-color-2, 0.8);
+      }
+    }
+  }
+
+  .sweet-overlay {
+    outline: 0;
+  }
+}

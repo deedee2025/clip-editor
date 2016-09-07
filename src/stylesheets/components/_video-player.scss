@@ -1,0 +1,133 @@
+.video-player {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  border: solid $gray-darker-color;
+  border-width: 0 10px;
+  background: repeating-linear-gradient(-45deg, #333, #333 5px, #444 0, #444 10px);
+  flex-grow: 1;
+
+  video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0
+  }
+}
+
+.video-player__video {
+  flex-grow: 1;
+  padding: 5px 0;
+  display: flex;
+  height: calc(100% - 53px);
+
+  > div {
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    background: black;
+    position: relative;
+
+    > div {
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      @include ghost;
+    }
+  }
+}
+
+.video-player__video-speed {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: rgba(white, 0.6);
+}
+
+.video-player__progress {
+  width: 100%;
+  height: 8px;
+  background: $gray-darker-color;
+  border-bottom: 1px solid $gray-color;
+}
+
+.video-player__progress-indicator {
+  background: $success-color;
+  width: 2px;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  position: relative;
+  left: 0;
+}
+
+.video-player__clip-indicator {
+  background: $main-color;
+  width: 2px;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-left: -1px;
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  > div {
+    position: absolute;
+    height: 5px;
+    width: 10px;
+    background: $main-color;
+    top: -10px;
+    left: -4px;
+    border-radius: 2px 2px 0 0;
+    box-shadow: $z-depth-1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid $main-color;
+      left: calc(50% - 5px);
+      bottom: -6px;
+    }
+  }
+}
+
+.video-player__controls {
+  background: $gray-darker-color;
+  display: flex;
+
+  > * {
+    flex-grow: 1;
+  }
+
+  > .btn.btn-icon {
+    font-size: 20px;
+  }
+}
+
+.video-player__elapsed-time,
+.video-player__left-time {
+  font-size: 15px;
+  line-height: 3em;
+  padding: 0 20px;
+}
+
+.video-player__elapsed-time {
+  color: $success-color;
+}
+
+.video-player__left-time {
+  text-align: right;
+  color: $gray-lighter-color;
+}

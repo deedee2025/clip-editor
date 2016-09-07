@@ -1,0 +1,70 @@
+.main-content {
+  height: calc(100vh - #{$header-height});
+}
+
+.main-toolbar {
+  background: $gray-darker-color;
+  text-align: right;
+  padding: 5px 15px;
+}
+
+.video-layout {
+  flex-grow: 1;
+  display: flex;
+  border-bottom: 1px solid $gray-darker-color;
+  height: calc(100% - #{$clip-controls-height + 44px});
+}
+
+.clip-list-container {
+  width: $clip-list-width;
+  background: $gray-color;
+}
+
+.video-player-container {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  width: 65vw;
+}
+
+.clip-controls {
+  height: $clip-controls-height;
+  background: $gray-color;
+  flex-shrink: 0;
+}
+
+.video-player__jump-on {
+  position: absolute;
+  background: rgba(white, 0.5);
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 5px 15px;
+  box-shadow: $z-depth-2;
+  border-radius: 2px;
+  font-size: 14px;
+  color: $gray-darker-color;
+  font-weight: bold;
+  text-align: center;
+  visibility: collapse;
+  opacity: 0;
+  transition: all 0.35s $cubic-bezier;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    top: 38%;
+  }
+
+  > span {
+    display: block;
+    font-size: 40px;
+  }
+
+  > .btn.btn-link {
+    display: block;
+    margin: auto;
+    color: $error-color;
+  }
+}

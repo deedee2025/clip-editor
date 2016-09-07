@@ -1,0 +1,77 @@
+.btn {
+  outline: none !important;
+  border-radius: 2px;
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &-default,
+  &-danger {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  &-default {
+    background: $gray-darker-color-2;
+    color: $gray-lighter-color;
+    border-color: $gray-darker-color;
+
+    &:hover,
+    &:focus,
+    &:hover:focus,
+    &:active:focus,
+    &:active {
+      background: rgba($gray-darker-color-2, 0.5);
+      color: $gray-lighter-color;
+      border-color: rgba($gray-darker-color, 0.5);
+    }
+
+    &:disabled:hover {
+      background: $gray-darker-color-2;
+      color: $gray-lighter-color;
+      border-color: $gray-darker-color;
+    }
+  }
+
+  &-icon {
+    background: transparent;
+    color: white;
+
+    &:disabled {
+      color: rgba(white, 0.6);
+      &:hover {
+        color: rgba(white, 0.6);
+      }
+    }
+
+    &:not(:disabled) {
+      &:active,
+      &:focus {
+        background: rgba(white, 0.05);
+        color: white;
+      }
+
+      &:hover {
+        background: rgba(white, 0.1);
+        color: white;
+      }
+    }
+  }
+
+  &-small {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+.button-set {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+
+  > li {
+    display: inline-block;
+  }
+}

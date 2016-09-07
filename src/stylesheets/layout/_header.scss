@@ -1,0 +1,18 @@
+header.main-header {
+  height: $header-height;
+  background: $main-color;
+  box-shadow: $z-depth-1;
+}
+
+.main-header__logo {
+  display: inline-block;
+  height: 100%;
+  padding: 8px 20px;
+  color: white;
+  font-size: 22px;
+
+  img {
+    height: 100%;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,38 @@
+.form-control {
+  border-radius: 2px;
+  background: $gray-color;
+  color: $gray-lighter-color;
+  border-color: $gray-darker-color-2;
+  height: auto;
+  padding: 4px 12px;
+
+  &:focus {
+    border-color: $gray-darker-color;
+    box-shadow: none;
+  }
+
+  &::selection {
+    background: $gray-darker-color-2;
+  }
+  &::-moz-selection {
+    background: $gray-darker-color-2;
+  }
+
+  &.has-error {
+    border-color: $error-color;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    background: rgba(white, 0.05);
+    opacity: 0.8;
+  }
+}
+
+.form-group label {
+  font-size: 12px;
+  &.disabled {
+    opacity: 0.7;
+  }
+}
